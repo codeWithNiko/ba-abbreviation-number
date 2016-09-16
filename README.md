@@ -49,7 +49,12 @@ function config(unitsProvider) {
     unitsProvider.setUnits(unitObject);
     }
 ```
+## Installation
 
-    
+### Bower
+```HTML
+bower install nikolaDrangovski/ba-abbreviation-number
+```
+### Manual
 
-
+You can also just download the repository and include the script it in your index.html
