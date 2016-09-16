@@ -66,49 +66,46 @@
 
                 scope.$watch("number", function (data) {
 
-
-                    data = parseFloat(data.replace(/,/g, ''));
-                    var negNumber = false;
-                    var formattedNumber = data;
-                    if (data < 0) {
-                        negNumber = true;
-                    }
-                    data = Math.abs(data);
-                    if (data >= 1000000000000000000000000) {
-                        formattedNumber = (data / 1000000000000000000000000).toFixed(1).replace(/\.0$/, '') + units.septillion;
-                    }
-                    else if (data >= 1000000000000000000000) {
-                        formattedNumber = (data / 1000000000000000000000).toFixed(1).replace(/\.0$/, '') + units.sextillion;
-                    }
-                    else if (data >= 1000000000000000000) {
-                        formattedNumber = (data / 1000000000000000000).toFixed(1).replace(/\.0$/, '') + units.quintillion;
-                    }
-                    else if (data >= 1000000000000000) {
-                        formattedNumber = (data / 1000000000000000).toFixed(1).replace(/\.0$/, '') + units.quadrillion;
-                    }
-                    else if (data >= 1000000000000) {
-                        formattedNumber = (data / 1000000000000).toFixed(1).replace(/\.0$/, '') + units.trillion;
-                    }
-                    else if (data >= 1000000000) {
-                        formattedNumber = (data / 1000000000).toFixed(1).replace(/\.0$/, '') + units.billion;
-                    }
-                    else if (data >= 1000000) {
-                        formattedNumber = (data / 1000000).toFixed(1).replace(/\.0$/, '') + units.million;
-                    }
-                    else if (data >= 1000) {
-                        formattedNumber = (data / 1000).toFixed(1).replace(/\.0$/, '') + units.thousand;
-                    }
-                    else {
-                        formattedNumber = data;
-                    }
-                    if (negNumber) {
-                        formattedNumber = '-' + formattedNumber;
-                    }
+                    if (data !== '') {
 
 
-                    if (isNaN(formattedNumber)) {
-                        scope.myNumber = '';
-                    } else {
+                        data = parseFloat(data.replace(/,/g, ''));
+                        var negNumber = false;
+                        var formattedNumber = data;
+                        if (data < 0) {
+                            negNumber = true;
+                        }
+                        data = Math.abs(data);
+                        if (data >= 1000000000000000000000000) {
+                            formattedNumber = (data / 1000000000000000000000000).toFixed(1).replace(/\.0$/, '') + units.septillion;
+                        }
+                        else if (data >= 1000000000000000000000) {
+                            formattedNumber = (data / 1000000000000000000000).toFixed(1).replace(/\.0$/, '') + units.sextillion;
+                        }
+                        else if (data >= 1000000000000000000) {
+                            formattedNumber = (data / 1000000000000000000).toFixed(1).replace(/\.0$/, '') + units.quintillion;
+                        }
+                        else if (data >= 1000000000000000) {
+                            formattedNumber = (data / 1000000000000000).toFixed(1).replace(/\.0$/, '') + units.quadrillion;
+                        }
+                        else if (data >= 1000000000000) {
+                            formattedNumber = (data / 1000000000000).toFixed(1).replace(/\.0$/, '') + units.trillion;
+                        }
+                        else if (data >= 1000000000) {
+                            formattedNumber = (data / 1000000000).toFixed(1).replace(/\.0$/, '') + units.billion;
+                        }
+                        else if (data >= 1000000) {
+                            formattedNumber = (data / 1000000).toFixed(1).replace(/\.0$/, '') + units.million;
+                        }
+                        else if (data >= 1000) {
+                            formattedNumber = (data / 1000).toFixed(1).replace(/\.0$/, '') + units.thousand;
+                        }
+                        else {
+                            formattedNumber = data;
+                        }
+                        if (negNumber) {
+                            formattedNumber = '-' + formattedNumber;
+                        }
                         scope.myNumber = formattedNumber;
                     }
 
