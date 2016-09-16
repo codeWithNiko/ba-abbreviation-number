@@ -49,6 +49,10 @@ function config(unitsProvider) {
     unitsProvider.setUnits(unitObject);
     }
 ```
+## Module Loading
+```javascript
+angular.module('myModule', ['ba-abbreviation-number']);
+```
 ## Installation
 
 ### Bower
