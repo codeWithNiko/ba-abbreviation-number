@@ -1,0 +1,25 @@
+{
+  "name": "ba-abbreviation-number",
+  "authors": [
+    "Nikola Drangovski <bracketsacademy@gmail.com>"
+  ],
+  "description": "shorten large numbers, make abbreviation numbers",
+  "main": "ba-abbreviation-number.js",
+  "keywords": [
+    "shroten",
+    "large",
+    "numbers",
+    "abbreviation",
+    "numbers"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nikolaDrangovski/ba-abbreviation-number",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
