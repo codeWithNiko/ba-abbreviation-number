@@ -51,7 +51,7 @@
         .directive('baAbbNum', baAbbNum);
 
     /** @ngInject */
-    function baAbbNum(units) {
+    function baAbbNum(units, $log) {
         var directive = {
             restrict: 'E',
             template: '<span>{{myNumber}}</span>',
@@ -106,7 +106,11 @@
                     }
 
 
-                    scope.myNumber = formattedNumber;
+                    if (isNaN(formattedNumber)) {
+                        scope.myNumber = '';
+                    } else {
+                        scope.myNumber = formattedNumber;
+                    }
 
 
                 }, true);
